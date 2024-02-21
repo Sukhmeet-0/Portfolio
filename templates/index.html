@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukhmeet Singh</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='input.css')}}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class="antialised text-gray-600">
+        <div class="min-h-screen absolute w-full">
+            <div class="absolute top-0 w-full h-1/2 bg-cover bg-bottom"
+                style="background-image: url(../static/background.jpg);">
+
+            </div>
+        </div>
+        <section class="flex min-h-screen justify-center items-center">
+            <div class="relative">
+                <div>
+                    <div
+                        class="absolute z-0 inset-0 bg-gradient-to-r from-cyan-400 to-green-500 shadow-md transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-md">
+                    </div>
+                </div>
+                <div class="relative z-10 bg-white p-12 rounded-md shadow-md md:flex md:space-x-12 max-w-4xl">
+                    <div class="py-4 space-y-6 justify-between">
+                        <div>
+                            <p class="text-lg ">Hello, I am</p>
+                            <h1 class="text-4xl font-bold text-gray-800">Sukhmeet Singh</h1>
+                        </div>
+                        <div>
+                            <p class="text-xl leading-relaxed">Mern-Stack web developer and machine learning enthusiast
+                                to build
+                                websites
+                                and make ML models to find patterns from data.</p>
+                        </div>
+                        <div class="inline-flex space-x-4 text-xl">
+                            <a href="https://www.youtube.com/"><ion-icon name="logo-youtube"></ion-icon></a>
+                            <a href="https://twitter.com/?lang=en-in"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="https://www.linkedin.com/in/sukhmeet-singh-762b4724b/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="https://github.com/Sukhmeet-0"><ion-icon name="logo-github"></ion-icon></a>
+                        </div>
+                    </div>
+                    <img src="{{url_for('static',filename='profile.jpg')}}" alt=""
+                        class="w-80 border-white border-6 drop-shadow-lg rounded-full flex-shrink-0">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bg-gray-50 pt-20 pb-28 px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center">
+                    <h1 class="text-6xl font-bold text-gray-800">Services</h1>
+                    <p class="pt-2">Here's what I offer</p>
+                </div>
+                <div class="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+                    <div class="relative">
+                        <div
+                            class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+                        </div>
+
+                        <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-12">
+                            <ion-icon name="phone-portrait-outline" class="text-5xl text-cyan-500"></ion-icon>
+                            <h2 class="pt-3 font-bold text-2xl">
+                                Responsive Websites
+                            </h2>
+                            <p class="pt-3">
+                                Create User friendly and responsive websites and make your business grow exponentially
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+                        </div>
+
+                        <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-12">
+                            <ion-icon name="layers-outline" class="text-5xl text-cyan-500"></ion-icon>
+                            <h2 class="pt-3 font-bold text-2xl">Machine Learning</h2>
+                            <p class="pt-3">
+                                Create various machine learning models to analyze your data and finding hidden patterns between your data and also to make predictions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+                        </div>
+
+                        <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-12">
+                            <ion-icon name="chatbubbles-outline" class="text-5xl text-cyan-500"></ion-icon>
+                            <h2 class="pt-3 font-bold text-2xl">
+                                Consultation & Teaching
+                            </h2>
+                            <p class="pt-3">
+                                Learn various programming languages and become a code your self. It is said Programmers are machines which convert caffeine to code, Enjoy Learning!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center">
+                    <h1 class="text-6xl font-bold text-gray-800">Work</h1>
+                    <p class="pt-2">The best of my works</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+                    <div class="bg-white rounded-md shadow-md lg:col-span-2">
+                        <img src="{{url_for('static',filename='work1.jpg')}}" alt="" class="object-cover w-full h-80" />
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl">Diabetes Prediction System</h3>
+                            <p class="pt-3">
+                                Made a machine learning model which predicts the presence of diabetes in user by taking input from user about various medical details.
+                            </p>
+                            <a href="https://github.com/Sukhmeet-0/diabetes-prediction-system"
+                                class="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white">View
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md shadow-md">
+                        <img src="{{url_for('static',filename='work2.jpg')}}" alt="" class="object-cover w-full h-80" />
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl">Hospital management system</h3>
+                            <p class="pt-3">
+                                Made a Hospital management system GUI which helps the doctors to add patient details, record , update or even delete the patient diagnosis details/data for future reference.
+                            </p>
+                            <a href="https://github.com/Sukhmeet-0/projects/tree/main/Hopital%20Management%20System"
+                                class="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white">View
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md shadow-md">
+                        <img src="{{url_for('static',filename='work3.jpg')}}" alt="" class="object-cover w-full h-80" />
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl">E-Notes</h3>
+                            <p class="pt-3">
+                                Created an E-Notes webapp on which you can create your own notes securely using username and password and delete, read, update your notes according to your needs. you can also store your personal details or data here. 
+                            </p>
+                            <a href="https://github.com/Sukhmeet-0/projects/tree/main/Enotes"
+                                class="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white">View
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md shadow-md lg:col-span-2">
+                        <img src="{{url_for('static',filename='work4.jpg')}}" alt="" class="object-cover w-full h-80" />
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl">Electrical Energy prediction model</h3>
+                            <p class="pt-3">
+                                Made an Artificial Neural Network model which can predict the electrical energy as output from the combined power cycle plant by carefully analizing the data of the power plant and learning patterns from it using neural networks.
+                            </p>
+                            <a href="https://github.com/Sukhmeet-0/Predict_electrical_energy_of_combined_cyclePowerPlane_using_ArificialNeuralNetworks"
+                                class="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-20 pb-36 px-8 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center">
+                    <h1 class="text-6xl font-bold text-gray-800">Contact</h1>
+                    <p class="pt-2">Get in touch with me</p>
+                </div>
+            </div>
+            <div class="mt-16 relative max-w-4xl mx-auto">
+                <div
+                    class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+                </div>
+                <div class="relative z-20 bg-white rounded-md shadow-md p-12">
+                    <form action="/send_email" method="post">
+                        <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 ">
+                            <p class="font-bold text-3xl m-4 mb-5"><ion-icon name="phone-portrait-outline" class="text-3xl "></ion-icon>+919988899879</p>
+                            <a href="https://www.linkedin.com/in/sukhmeet-singh-762b4724b/"><p class="font-bold text-3xl m-4"><ion-icon name="logo-linkedin" class="text-3xl  "></ion-icon>LinkedIn</p></a>
+                            <a href="https://github.com/Sukhmeet-0"><p class="font-bold text-3xl m-4"><ion-icon name="logo-github" class="text-3xl "></ion-icon>Github</p></a>
+                            <!-- <input type="text" placeholder="Name" name="name" required
+                                class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400" id="name" />
+                            <input type="text" placeholder="Email" name="email" required
+                                class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400" id="email" />
+                            <input type="text" placeholder="Subject" name="subject" required
+                                class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2" id="subject" />
+                            <textarea rows="5" placeholder="Message" name="message" required
+                                class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2" id="message"></textarea> -->
+                        </div>
+                        <!-- <button
+                            class="inline-block w-auto mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white" onclick="send">
+                            Send Message
+                        </button> -->
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function send(){
+            alert("Email sent successfully")
+        }
+    </script>
+</body>
+
+</html>
