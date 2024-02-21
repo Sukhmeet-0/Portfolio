@@ -8,28 +8,28 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/send_email',methods=['POST'])
-def send_email():
-    name = request.form.get('name')
-    email = request.form.get('email')
-    subject = request.form.get('subject')
-    message = request.form.get('message')
+# @app.route('/send_email',methods=['POST'])
+# def send_email():
+#     name = request.form.get('name')
+#     email = request.form.get('email')
+#     subject = request.form.get('subject')
+#     message = request.form.get('message')
 
-    msg = EmailMessage()
-    msg['From'] = email
-    msg['To'] = 'sukhmeets111@gmail.com'
-    msg['Subject'] = subject
-    if msg is None:
-        msg = "No message provided"
-    msg.set_content(message)
+#     msg = EmailMessage()
+#     msg['From'] = email
+#     msg['To'] = 'sukhmeets111@gmail.com'
+#     msg['Subject'] = subject
+#     if msg is None:
+#         msg = "No message provided"
+#     msg.set_content(message)
 
-    with smtplib.SMTP("smtp.gmail.com",587) as server:
-        server.starttls()
-        server.login("abc@gmail.com",'abc')
-        server.send_message(msg)
-        return render_template('index.html')
+    # with smtplib.SMTP("smtp.gmail.com",587) as server:
+    #     server.starttls()
+    #     server.login("abc@gmail.com",'abc')
+    #     server.send_message(msg)
+    #     return render_template('index.html')
 
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
